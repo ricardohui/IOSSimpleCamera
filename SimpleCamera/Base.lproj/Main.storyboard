@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleCamera" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cvc-90-2Ia">
+                                <rect key="frame" x="0.0" y="0.0" width="560" height="350"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewg-81-ikj">
+                                <rect key="frame" x="296" y="550" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="lNp-aO-obK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="lNp-aO-obK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="lNp-aO-obK"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="loadImageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1sV-H6-9lo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ewg-81-ikj" secondAttribute="bottom" constant="20" id="0vy-b7-xxq">
+                                <variation key="widthClass=compact" constant="88"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cvc-90-2Ia" secondAttribute="bottom" constant="20" id="1ll-OP-hwU">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Cvc-90-2Ia" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="102" id="7n3-cS-gas">
+                                <variation key="widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="ewg-81-ikj" firstAttribute="centerX" secondItem="Cvc-90-2Ia" secondAttribute="centerX" id="991-wo-zBI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ewg-81-ikj" secondAttribute="bottom" constant="234" id="LNF-mg-bLg"/>
+                            <constraint firstItem="ewg-81-ikj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="163" id="PDn-Oo-Cxc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ewg-81-ikj" secondAttribute="trailing" constant="151" id="XSc-Uu-d89"/>
+                            <constraint firstItem="ewg-81-ikj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YSF-yh-jIt"/>
+                            <constraint firstItem="ewg-81-ikj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="276" id="gGk-Zq-GM8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ewg-81-ikj" secondAttribute="trailing" constant="238" id="nW2-B1-0To"/>
+                            <constraint firstItem="Cvc-90-2Ia" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vX7-93-rUh"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Cvc-90-2Ia"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1ll-OP-hwU"/>
+                                <exclude reference="LNF-mg-bLg"/>
+                                <exclude reference="991-wo-zBI"/>
+                                <exclude reference="PDn-Oo-Cxc"/>
+                                <exclude reference="XSc-Uu-d89"/>
+                                <exclude reference="YSF-yh-jIt"/>
+                                <exclude reference="7n3-cS-gas"/>
+                                <exclude reference="vX7-93-rUh"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Cvc-90-2Ia"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="0vy-b7-xxq"/>
+                                <include reference="1ll-OP-hwU"/>
+                                <include reference="LNF-mg-bLg"/>
+                                <include reference="991-wo-zBI"/>
+                                <exclude reference="PDn-Oo-Cxc"/>
+                                <exclude reference="XSc-Uu-d89"/>
+                                <include reference="YSF-yh-jIt"/>
+                                <exclude reference="gGk-Zq-GM8"/>
+                                <exclude reference="nW2-B1-0To"/>
+                                <include reference="7n3-cS-gas"/>
+                                <include reference="vX7-93-rUh"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Cvc-90-2Ia" id="wza-3k-doA"/>
+                        <outlet property="loadPhotoButton" destination="ewg-81-ikj" id="DA4-U6-9mj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="387"/>
+        </scene>
+    </scenes>
+</document>
